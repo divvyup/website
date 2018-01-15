@@ -1,6 +1,9 @@
 # We need a very very basic
-# container, so use slim
-FROM node:9.4.0-slim
+# container, so use alpine
+FROM node:9.4.0-alpine
+
+# Install git
+RUN apk update && apk add git
 
 # Make a directory for our
 # source
